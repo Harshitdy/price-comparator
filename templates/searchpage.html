@@ -1,0 +1,99 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="author" content="colorlib.com" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="{{url_for('static', filename = 'css/radio.css')}}" />
+  <link rel="stylesheet" href="{{url_for('static', filename = 'css/navbar.css')}}" />
+  <!--===============================================================================================-->
+  <!-- <link rel="icon" type="image/png" href="images/icons/favicon.ico"/> -->
+</head>
+
+<body>
+  {% for row in data %}
+  <div class="action-mine">
+    <div class="profile-mine">
+      <img src="/static/img/speakers/4.jpg" alt="" />
+    </div>
+    <div class="menu-mine">
+      <h3>{{row.1}}</h3>
+      <button class="btn1 btn-outline-light">Logout</button>
+    </div>
+  </div>
+  <div class="logo">
+    <div class="gni-logo">
+      <img src="/static/img/gnilogo4.png" alt="" />
+    </div>
+  </div>
+  {% endfor %}
+  <div class="on-top mt-3">
+    <form
+            action="/all_data"
+            method="POST"
+          >
+    <h2>Choose the Source</h2>
+    <div class="group">
+      <input type="checkbox" name="flipkart" id="flipkart" value="Flipkart"/>
+      <label for="flipkart">Flipkart</label>
+      <input type="checkbox" name="amazon" id="amazon" value="Amazon"/>
+      <label for="amazon">Amazon</label>
+      <input type="checkbox" name="grofers" id="grofers" value="Grofers"/>
+      <label for="grofers">Grofers</label>
+      <input type="checkbox" name="headsupfortails" id="headsupfortails" value="Headsupfortails"/>
+      <label for="headsupfortails">Headsupfortails</label>
+    </div>
+
+    <h2>Choose the Product</h2>
+    <div class="group">
+      <input type="checkbox" name="1kg" id="1kg" value="1 kg"/>
+      <label for="1kg">1kg</label>
+      <input type="checkbox" name="3kg" id="3kg" value="3 kg"/>
+      <label for="3kg">3kg</label>
+      <input type="checkbox" name="10kg" id="10kg" value="10 kg"/>
+      <label for="10kg">10kg</label>
+      <input type="checkbox" name="20kg" id="20kg" value="20 kg"/>
+      <label for="20kg">20kg</label>
+    </div>
+    <div class="style">
+      <input type="submit" name="searching" value="submit" class="btn btn-outline-light" href="/all_data">
+    </div>
+  </form>
+  </div>
+    <div class="container">
+      <h1 style="color: rgb(99, 96, 96);">All Products</h1>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Source</th>
+            <th scope="col">Name of product</th>
+            <th scope="col">Price</th>
+            <th scope="col">weight</th>
+            <!-- <th scope="col">rating</th> -->
+            <!-- <th scope="col">People's rating</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          {% for cln in dataSrc %}
+          <tr>
+            <th scope="row">{{cln.1}}</th>
+            <td>{{cln.2}}</td>
+            <td>{{cln.3}}</td>
+            <td>{{cln.4}}</td>
+            <!-- <td>{{cln.5}}</td> -->
+            <!-- <td>{{cln.6}}</td> -->
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+</body>
+</html>

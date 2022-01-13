@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Poppins', sans-serif; */
+}
+.action-mine{
+    position: fixed;
+    top: 50px;
+    right: 50px;
+
+}
+.action-mine .profile-mine{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.action-mine .profile-mine img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 1px 2px 2px 3px rgba(0,0,0,0.1);
+}
+.action-mine .menu-mine{
+    position:absolute;
+    top: 80px;
+    right: -80px;
+    padding: 5px 10px;
+    background: linear-gradient(37deg, #fdffff, #fdc4cd);
+    width: 200px;
+    border-radius: 12px;
+    box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+    transform: 0.5s;
+    box-shadow: 1px 2px 2px 3px rgba(100, 95, 95, 0.1);
+}
+.action-mine .menu-mine h3{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1em;
+    font-weight: 700;
+    color: black;
+    margin-top: 7px
+}
+
+.logo{
+    position: fixed;
+    top: 50px;
+    left: 50px;
+
+}
+.logo .gni-logo{
+    position: relative;
+    width: 140px;
+    height: 70px;
+    overflow: hidden;
+}
+
+.logo .gni-logo img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

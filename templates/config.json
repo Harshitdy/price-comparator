@@ -1,0 +1,14 @@
+{
+    "params":
+    {
+        "local_server":"True",
+        "local_uri":"mysql+pymysql://root:@localhost/graphnexti_registration",
+        "prod_uri": "mysql+pymysql://root:@localhost/graphnexti_registration",
+        "gmail_user": "your email",
+        "gmail_password": "your password", 
+        "user": "root",
+        "password": "",
+        "user_datbase": "graphnexti_registration"
+
+    }
+}
